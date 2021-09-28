@@ -19,19 +19,21 @@ public class WebSteps {
     public void SearchForRepository(String REPOSITORY){
         $(".header-search-input").setValue(REPOSITORY).pressEnter();
     }
+
     @Step ("Открываем репозиторий {REPOSITORY}")
     public void OpenRepository(String REPOSITORY){
         $(By.linkText(REPOSITORY)).click();
     }
+
     @Step ("Переходим в раздел Issues")
     public void GoToIssues(){
         $(byPartialLinkText("Issues")).click();
     }
+
     @Step ("Проверяем наличие Issue c текстом {TEXT} ")
     public void ShouldSeeIssueWithText(String TEXT){
         $("#issue_68_link").shouldHave(text(TEXT));
     }
-
 
 }
 
