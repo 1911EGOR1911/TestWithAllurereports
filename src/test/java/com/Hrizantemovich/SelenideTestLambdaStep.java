@@ -10,8 +10,10 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class SelenideTestLambdaStep {
+
 private static final String REPOSITORY = "eroshenkoam/allure-example";
 private static final String TEXT = "Listeners NamedBy";
+
     @Test
     void testGithub() {
         step("Открываем главную страницу",() -> {
@@ -29,14 +31,10 @@ private static final String TEXT = "Listeners NamedBy";
         step("Переходим в раздел Issues",() ->{
             $(byPartialLinkText("Issues")).click();
         });
+
         step("Проверяем наличие Issue c текстом Listeners NamedBy ",() ->{
             $("#issue_68_link").shouldHave(text(TEXT));
-
         });
-
-
-
     }
-
 }
 
