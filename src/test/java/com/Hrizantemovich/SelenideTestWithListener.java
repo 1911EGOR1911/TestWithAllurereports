@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byPartialLinkText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SelenideTestWithListner {
+public class SelenideTestWithListener {
 
     @Test
     void testGithub() {
